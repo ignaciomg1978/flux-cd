@@ -1,0 +1,18 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: chroma
+  namespace: default  # O cambia el namespace si prefieres otro
+spec:
+  releaseName: chroma
+  interval: 59m0s
+  chart:
+    spec:
+      chart: chroma  # Nombre del chart en TrueCharts
+      sourceRef:
+        kind: HelmRepository
+        name: truecharts-repo
+      #version: "x.x.x"  # Cambia esto si quieres una versión específica
+  valuesFrom:
+    - kind: ConfigMap
+      name: chroma-values
