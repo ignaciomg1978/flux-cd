@@ -11,7 +11,9 @@ spec:
       chart: chroma  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
-        name: truecharts-repo
+        name: truechartsoci
+        namespace: flux-system
+      interval: 15m
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
   valuesFrom:
     - kind: ConfigMap
