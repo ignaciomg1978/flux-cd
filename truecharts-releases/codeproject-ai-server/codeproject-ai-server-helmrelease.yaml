@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: codeproject-ai-server
@@ -11,9 +11,7 @@ spec:
       chart: codeproject-ai-server  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
-        name: truechartsoci
-        namespace: flux-system
-      interval: 15m
+        name: codeproject-ai-server
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
   valuesFrom:
     - kind: ConfigMap

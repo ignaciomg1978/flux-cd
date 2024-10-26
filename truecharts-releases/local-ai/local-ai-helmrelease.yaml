@@ -1,4 +1,4 @@
-apiVersion: helm.toolkit.fluxcd.io/v2beta1
+apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: local-ai
@@ -11,9 +11,7 @@ spec:
       chart: local-ai  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
-        name: truechartsoci
-        namespace: flux-system
-      interval: 15m
+        name: local-ai
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
   valuesFrom:
     - kind: ConfigMap
