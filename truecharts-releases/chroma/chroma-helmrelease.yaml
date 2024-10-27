@@ -10,6 +10,7 @@ spec:
     spec:
       chart: truecharts/chroma  # Nombre del chart en TrueCharts
       sourceRef:
+        kind: HelmRepository
         name: truecharts  # Nombre del HelmRepository creado
         namespace: flux-system  # Namespace donde se encuentra el HelmRepository
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
