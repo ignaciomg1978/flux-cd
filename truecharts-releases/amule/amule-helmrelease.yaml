@@ -8,10 +8,11 @@ spec:
   interval: 59m0s
   chart:
     spec:
-      chart: amule  # Nombre del chart en TrueCharts
+      chart: truecharts/amule  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
-        name: amule
+        name: truecharts  # Nombre del HelmRepository creado
+        namespace: flux-system  # Namespace donde se encuentra el HelmRepository
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
   valuesFrom:
     - kind: ConfigMap

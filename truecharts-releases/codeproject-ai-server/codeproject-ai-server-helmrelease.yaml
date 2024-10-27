@@ -8,10 +8,11 @@ spec:
   interval: 59m0s
   chart:
     spec:
-      chart: codeproject-ai-server  # Nombre del chart en TrueCharts
+      chart: truecharts/codeproject-ai-server  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
-        name: codeproject-ai-server
+        name: truecharts  # Nombre del HelmRepository creado
+        namespace: flux-system  # Namespace donde se encuentra el HelmRepository
       #version: "x.x.x"  # Cambia esto si quieres una versión específica
   valuesFrom:
     - kind: ConfigMap
