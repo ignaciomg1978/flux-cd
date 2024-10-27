@@ -8,7 +8,7 @@ spec:
   interval: 59m0s
   chart:
     spec:
-      chart: truecharts/local-ai  # Nombre del chart en TrueCharts
+      chart: local-ai  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
         name: truecharts  # Nombre del HelmRepository creado

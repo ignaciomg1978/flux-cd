@@ -8,7 +8,7 @@ spec:
   interval: 59m0s
   chart:
     spec:
-      chart: truecharts/codeproject-ai-server  # Nombre del chart en TrueCharts
+      chart: codeproject-ai-server  # Nombre del chart en TrueCharts
       sourceRef:
         kind: HelmRepository
         name: truecharts  # Nombre del HelmRepository creado
